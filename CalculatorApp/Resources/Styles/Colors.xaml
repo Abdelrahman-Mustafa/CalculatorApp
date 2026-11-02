@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- ألوان الخلفيات والنصوص للوضعين الفاتح والداكن -->
+    <Color x:Key="PageBgLight">#F3F3F3</Color>
+    <Color x:Key="PageBgDark">#202020</Color>
+
+    <Color x:Key="TextLight">#000000</Color>
+    <Color x:Key="TextDark">#FFFFFF</Color>
+
+    <!-- ألوان خلفيات الأزرار -->
+    <!-- أزرار الأرقام -->
+    <Color x:Key="NumBtnBgLight">#FFFFFF</Color>
+    <Color x:Key="NumBtnBgDark">#3B3B3B</Color>
+
+    <!-- أزرار العمليات والدوال -->
+    <Color x:Key="OpBtnBgLight">#F9F9F9</Color>
+    <Color x:Key="OpBtnBgDark">#323232</Color>
+
+    <!-- زر التساوي (Accent Button) -->
+    <Color x:Key="AccentBtnBgLight">#0067C0</Color>
+    <Color x:Key="AccentBtnBgDark">#4CC2FF</Color>
+    <Color x:Key="AccentBtnTextLight">#FFFFFF</Color>
+    <Color x:Key="AccentBtnTextDark">#000000</Color>
+
+    <!-- نص التعبير الرياضي العلوي (Expression) -->
+    <Color x:Key="ExpressionTextLight">#737373</Color>
+    <Color x:Key="ExpressionTextDark">#A0A0A0</Color>
+
+</ResourceDictionary>

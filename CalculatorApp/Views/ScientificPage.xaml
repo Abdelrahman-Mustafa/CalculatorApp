@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CalculatorApp.ViewModels"
+             x:Class="CalculatorApp.Views.ScientificPage"
+             Title="Bilimsel"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PageBgLight}, Dark={StaticResource PageBgDark}}">
+
+    <ContentPage.BindingContext>
+        <vm:CalculatorViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, Auto, *, *, *, *, *, *"
+          ColumnDefinitions="*, *, *, *, *"
+          Padding="6">
+
+        <Label Grid.Row="0" Grid.ColumnSpan="5" Text="{Binding Expression}" Style="{StaticResource ExpressionLabelStyle}" HeightRequest="28" />
+        <Label Grid.Row="1" Grid.ColumnSpan="5" Text="{Binding CurrentInput}" Style="{StaticResource DisplayLabelStyle}" HeightRequest="65" />
+
+        <Button Grid.Row="2" Grid.Column="0" Text="π" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="pi" />
+        <Button Grid.Row="2" Grid.Column="1" Text="e" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="e" />
+        <Button Grid.Row="2" Grid.Column="2" Text="CE" Command="{Binding ClearEntryCommand}" />
+        <Button Grid.Row="2" Grid.Column="3" Text="C" Command="{Binding ClearCommand}" />
+        <Button Grid.Row="2" Grid.Column="4" Text="⌫" Command="{Binding BackspaceCommand}" />
+
+        <Button Grid.Row="3" Grid.Column="0" Text="sin" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="sin" />
+        <Button Grid.Row="3" Grid.Column="1" Text="x²" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="sqr" />
+        <Button Grid.Row="3" Grid.Column="2" Text="1/x" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="1/x" />
+        <Button Grid.Row="3" Grid.Column="3" Text="√x" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="sqrt" />
+        <Button Grid.Row="3" Grid.Column="4" Text="÷" Style="{StaticResource OperatorButtonStyle}" Command="{Binding OperatorCommand}" CommandParameter="÷" />
+
+        <Button Grid.Row="4" Grid.Column="0" Text="cos" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="cos" />
+        <Button Grid.Row="4" Grid.Column="1" Text="7" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="7" />
+        <Button Grid.Row="4" Grid.Column="2" Text="8" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="8" />
+        <Button Grid.Row="4" Grid.Column="3" Text="9" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="9" />
+        <Button Grid.Row="4" Grid.Column="4" Text="×" Style="{StaticResource OperatorButtonStyle}" Command="{Binding OperatorCommand}" CommandParameter="×" />
+
+        <Button Grid.Row="5" Grid.Column="0" Text="tan" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="tan" />
+        <Button Grid.Row="5" Grid.Column="1" Text="4" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="4" />
+        <Button Grid.Row="5" Grid.Column="2" Text="5" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="5" />
+        <Button Grid.Row="5" Grid.Column="3" Text="6" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="6" />
+        <Button Grid.Row="5" Grid.Column="4" Text="-" Style="{StaticResource OperatorButtonStyle}" Command="{Binding OperatorCommand}" CommandParameter="-" />
+
+        <Button Grid.Row="6" Grid.Column="0" Text="ln" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="ln" />
+        <Button Grid.Row="6" Grid.Column="1" Text="1" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="1" />
+        <Button Grid.Row="6" Grid.Column="2" Text="2" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="2" />
+        <Button Grid.Row="6" Grid.Column="3" Text="3" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="3" />
+        <Button Grid.Row="6" Grid.Column="4" Text="+" Style="{StaticResource OperatorButtonStyle}" Command="{Binding OperatorCommand}" CommandParameter="+" />
+
+        <Button Grid.Row="7" Grid.Column="0" Text="n!" Style="{StaticResource SciButtonStyle}" Command="{Binding FuncCommand}" CommandParameter="fact" />
+        <Button Grid.Row="7" Grid.Column="1" Text="xʸ" Style="{StaticResource SciButtonStyle}" Command="{Binding OperatorCommand}" CommandParameter="^" />
+        <Button Grid.Row="7" Grid.Column="2" Text="0" Style="{StaticResource NumberButtonStyle}" Command="{Binding DigitCommand}" CommandParameter="0" />
+        <Button Grid.Row="7" Grid.Column="3" Text="," Style="{StaticResource NumberButtonStyle}" Command="{Binding DecimalCommand}" />
+        <Button Grid.Row="7" Grid.Column="4" Text="=" Style="{StaticResource EqualsButtonStyle}" Command="{Binding CalculateCommand}" />
+    </Grid>
+</ContentPage>
